@@ -1,0 +1,6 @@
+C:\Users\YES24\documents\visual studio 2015\Projects\Littorio\HttpClientShared\bin\Debug\HttpClientShared.exe.config
+C:\Users\YES24\documents\visual studio 2015\Projects\Littorio\HttpClientShared\bin\Debug\HttpClientShared.exe
+C:\Users\YES24\documents\visual studio 2015\Projects\Littorio\HttpClientShared\bin\Debug\HttpClientShared.pdb
+C:\Users\YES24\documents\visual studio 2015\Projects\Littorio\HttpClientShared\obj\Debug\HttpClientShared.exe
+C:\Users\YES24\documents\visual studio 2015\Projects\Littorio\HttpClientShared\obj\Debug\HttpClientShared.pdb
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\HttpClientShared\obj\Debug\HttpClientShared.csprojResolveAssemblyReference.cache

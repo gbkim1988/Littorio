@@ -1,0 +1,32 @@
+﻿<Controls:MetroWindow x:Class="Littorio.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Armament="clr-namespace:Littorio.Armament"
+        xmlns:local="clr-namespace:Littorio"
+        mc:Ignorable="d"
+        Title="Littorio Class Battleship"
+                              
+        BorderThickness="0"
+        GlowBrush="Black"
+        ResizeMode="CanResizeWithGrip"
+                      
+        WindowTransitionsEnabled="False"
+        WindowStartupLocation="CenterScreen"
+        Height="400" Width="600">
+
+    <Controls:MetroAnimatedSingleRowTabControl 
+        x:Name="MainTabControl" Grid.Row="1" FontSize="5">
+        <TabItem Header="SuperRapid" >
+            <Armament:SuperRapidView/>
+        </TabItem>
+        <!--
+        <TabItem Header="buttons2">
+            <Views:Page1/>
+        </TabItem>
+        -->
+    </Controls:MetroAnimatedSingleRowTabControl>
+</Controls:MetroWindow>

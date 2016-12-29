@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Littorio", "Littorio\Littorio.csproj", "{F0821F12-43F2-4AA0-AC35-FB869751EDE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Littorio.Test", "Littorio.Test\Littorio.Test.csproj", "{08E12FC6-805E-4FBA-AB1F-722049E6C24C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientShared", "HttpClientShared\HttpClientShared.csproj", "{B88FE63F-D7CA-4B09-8363-C8FF0D684536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittorioConsole", "LittorioConsole\LittorioConsole.csproj", "{FF6DE2C7-16DF-4C4F-8AC8-65F4EF83DD60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0821F12-43F2-4AA0-AC35-FB869751EDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0821F12-43F2-4AA0-AC35-FB869751EDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0821F12-43F2-4AA0-AC35-FB869751EDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0821F12-43F2-4AA0-AC35-FB869751EDE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E12FC6-805E-4FBA-AB1F-722049E6C24C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E12FC6-805E-4FBA-AB1F-722049E6C24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E12FC6-805E-4FBA-AB1F-722049E6C24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E12FC6-805E-4FBA-AB1F-722049E6C24C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88FE63F-D7CA-4B09-8363-C8FF0D684536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88FE63F-D7CA-4B09-8363-C8FF0D684536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88FE63F-D7CA-4B09-8363-C8FF0D684536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88FE63F-D7CA-4B09-8363-C8FF0D684536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6DE2C7-16DF-4C4F-8AC8-65F4EF83DD60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6DE2C7-16DF-4C4F-8AC8-65F4EF83DD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6DE2C7-16DF-4C4F-8AC8-65F4EF83DD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6DE2C7-16DF-4C4F-8AC8-65F4EF83DD60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Release\LittorioConsole.exe.config
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Release\LittorioConsole.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Release\LittorioConsole.pdb
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Release\HttpClientShared.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Release\HttpClientShared.pdb
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\obj\Release\LittorioConsole.csprojResolveAssemblyReference.cache
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\obj\Release\LittorioConsole.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\obj\Release\LittorioConsole.pdb

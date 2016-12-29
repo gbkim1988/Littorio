@@ -1,0 +1,10 @@
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Debug\LittorioConsole.exe.config
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Debug\LittorioConsole.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Debug\LittorioConsole.pdb
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Debug\HttpClientShared.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Debug\HttpClientShared.pdb
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\obj\Debug\LittorioConsole.csprojResolveAssemblyReference.cache
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\obj\Debug\LittorioConsole.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\obj\Debug\LittorioConsole.pdb
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Debug\Newtonsoft.Json.dll
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\LittorioConsole\bin\Debug\Newtonsoft.Json.xml

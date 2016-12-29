@@ -1,0 +1,5 @@
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\HttpClientShared\bin\Release\HttpClientShared.exe.config
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\HttpClientShared\bin\Release\HttpClientShared.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\HttpClientShared\bin\Release\HttpClientShared.pdb
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\HttpClientShared\obj\Release\HttpClientShared.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\HttpClientShared\obj\Release\HttpClientShared.pdb
