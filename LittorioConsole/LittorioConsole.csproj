@@ -59,6 +59,10 @@
       <Project>{b88fe63f-d7ca-4b09-8363-c8ff0d684536}</Project>
       <Name>HttpClientShared</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Littorio\Littorio.csproj">
+      <Project>{F0821F12-43F2-4AA0-AC35-FB869751EDE2}</Project>
+      <Name>Littorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

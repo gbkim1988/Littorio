@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientShared", "HttpCli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LittorioConsole", "LittorioConsole\LittorioConsole.csproj", "{FF6DE2C7-16DF-4C4F-8AC8-65F4EF83DD60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid", "DataGrid\DataGrid.csproj", "{FBE755DF-DC26-4462-8985-43282AED8FEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FF6DE2C7-16DF-4C4F-8AC8-65F4EF83DD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF6DE2C7-16DF-4C4F-8AC8-65F4EF83DD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF6DE2C7-16DF-4C4F-8AC8-65F4EF83DD60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE755DF-DC26-4462-8985-43282AED8FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE755DF-DC26-4462-8985-43282AED8FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE755DF-DC26-4462-8985-43282AED8FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE755DF-DC26-4462-8985-43282AED8FEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

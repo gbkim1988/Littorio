@@ -21,9 +21,11 @@ namespace Littorio.Armament
     /// </summary>
     public partial class SuperRapidView : UserControl
     {
+        private SuperRapidViewModel SRModel;
         public SuperRapidView()
         {
-            DataContext = new SuperRapidViewModel();
+            this.SRModel = new SuperRapidViewModel();
+            DataContext = SRModel;
             InitializeComponent();
         }
     }

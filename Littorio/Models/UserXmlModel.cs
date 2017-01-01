@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Littorio.Models
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-    public partial class UserXmlModel
+    public partial class user
     {
 
         private userNetInfo netInfoField;
@@ -43,6 +44,120 @@ namespace Littorio.Models
                 this.techContactField = value;
             }
         }
+
+        
+        #region Property For DataGrid Controls
+        public string IPRange
+        {
+            get
+            {
+                return this.netInfo.range;
+            }
+            set
+            {
+                this.netInfo.range = value;
+            }
+        }
+
+        public string IPPrefix
+        {
+            get
+            {
+                return this.netInfo.prefix;
+            }
+            set
+            {
+                this.netInfo.prefix = value;
+            }
+        }
+
+        public string Organization
+        {
+            get
+            {
+                return this.netInfo.orgName;
+            }
+            set
+            {
+                this.netInfo.orgName = value;
+            }
+        }
+
+        public string OrgID
+        {
+            get
+            {
+                return this.netInfo.orgID;
+            }
+            set
+            {
+                this.netInfo.orgID = value;
+            }
+        }
+
+        public string OrgAddr
+        {
+            get
+            {
+                return this.netInfo.addr;
+            }
+            set
+            {
+                this.netInfo.addr = value;
+            }
+        }
+
+        public DateTime Date
+        {
+            get
+            {
+                string date = this.netInfo.regDate.ToString();
+                return DateTime.ParseExact(date, "yyyyMMdd", CultureInfo.InvariantCulture, DateTimeStyles.None);
+            }
+            set
+            {
+                string date = value.ToString("yyyyMMdd");
+                this.netInfo.regDate = Convert.ToUInt32(date);
+
+            }
+        }
+
+        public string ContactName
+        {
+            get
+            {
+                return this.techContact.name;
+            }
+            set
+            {
+                this.techContact.name = value;
+            }
+        }
+
+        public string ContactPhone
+        {
+            get
+            {
+                return this.techContact.phone;
+            }
+            set
+            {
+                this.techContact.phone = value;
+            }
+        }
+
+        public string ContactEmail
+        {
+            get
+            {
+                return this.techContact.email;
+            }
+            set
+            {
+                this.techContact.email = value;
+            }
+        }
+        #endregion
     }
 
     /// <remarks/>

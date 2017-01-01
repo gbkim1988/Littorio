@@ -102,9 +102,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Async\AsyncObservableCollection.cs" />
     <Compile Include="Models\SuperRapidViewModel.cs" />
     <Compile Include="Models\UserXmlModel.cs" />
     <Compile Include="Serivces\ArmamentServices.cs" />
+    <Compile Include="Utils\XmlUtils.cs" />
     <Page Include="Armament\SuperRapidView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,6 +186,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HttpClientShared\HttpClientShared.csproj">
+      <Project>{B88FE63F-D7CA-4B09-8363-C8FF0D684536}</Project>
+      <Name>HttpClientShared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

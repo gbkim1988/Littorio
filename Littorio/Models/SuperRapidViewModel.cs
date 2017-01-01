@@ -1,4 +1,5 @@
 ﻿using Littorio.Async;
+using Littorio.Serivces;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -29,16 +30,18 @@ namespace Littorio.Models
 
     public sealed class SuperRapidViewModel : INotifyPropertyChanged
     {
-        ObservableCollection<UserXmlModel> datagrid = new ObservableCollection<UserXmlModel>();
         public SuperRapidViewModel()
         {
             Query = "61.1.1.111";
-            Operations = new ObservableCollection<Query2WhoisViewModel>();
-
+            Operations = new AsyncObservableCollection<Query2WhoisViewModel>();
+            WhoisGrid = new AsyncObservableCollection<user>();
             Query2WhoisCommand = new DelegateCommand(() => 
             {
                 // AsyncCommand 를 생성
-                
+                var countBytes = AsyncCommand.Create(token => ArmamentServices.QueryAndConvertToXmlAsync(Query, WhoisGrid, token));
+                countBytes.Execute(null);
+                Operations.Add(new Query2WhoisViewModel(this, Query, countBytes));
+
             });
         }
 
@@ -56,8 +59,8 @@ namespace Littorio.Models
             }
         }
 
-
-        public ObservableCollection<Query2WhoisViewModel> Operations { get; private set; }
+        public AsyncObservableCollection<user> WhoisGrid { get; set; }
+        public AsyncObservableCollection<Query2WhoisViewModel> Operations { get; private set; }
 
         public ICommand Query2WhoisCommand { get; private set; }
 
