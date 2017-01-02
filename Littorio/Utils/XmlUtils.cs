@@ -12,6 +12,12 @@ namespace Littorio.Utils
     public sealed class XmlUtils
     {
 
+        /// <summary>
+        /// Deserialize 메서드에서 오류가 발생 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="node"></param>
+        /// <returns></returns>
         public static T ConvertNode<T>(XmlNode node) where T : class
         {
             MemoryStream stm = new MemoryStream();

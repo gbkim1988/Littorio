@@ -1,5 +1,6 @@
 ﻿using Littorio.Async;
 using Littorio.Serivces;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Littorio.Models
@@ -56,6 +58,19 @@ namespace Littorio.Models
             {
                 _query = value;
                 OnPropertyChanged();
+            }
+        }
+
+        private void btnOpenFiles_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Filter = "Csv files (*.csv)|*.csv|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (openFileDialog.ShowDialog() == true)
+            {
+                foreach (string filename in openFileDialog.FileNames) { }
+                    //lbFiles.Items.Add(Path.GetFileName(filename));
             }
         }
 

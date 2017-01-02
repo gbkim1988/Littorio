@@ -27,7 +27,9 @@
             <Label Content="Query .... " FontSize="14" Margin="10,0,10,1"/>
             <TextBox Text="{Binding Query}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="15" Margin="10,30,100,0" />
             <Button Command="{Binding Query2WhoisCommand}" Content="Go" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,10,0" Width="75" Height="16"/>
-            <ItemsControl ItemsSource="{Binding Operations}" Margin="10,72,10,10" FontSize="14">
+            <TextBox Text="{Binding Path}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="15" Margin="10,60,100,0" />
+            <Button Command="{Binding LoadCSVFile}" Content="Open" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,10,0" Width="75" Height="16"/>
+            <ItemsControl ItemsSource="{Binding Operations}" Margin="10,134,10,10" FontSize="14">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -48,7 +50,7 @@
         </Grid>
         <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
         <Grid Grid.Column="2" Grid.Row="0" >
-            <StackPanel>
+            <StackPanel Margin="10">
             <DataGrid x:Name="WhoisDataGrid"
                   HeadersVisibility="All"
                   SelectionUnit="FullRow"

@@ -58,3 +58,7 @@ C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\obj\Debug
 C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\obj\Debug\Littorio.csproj.GenerateResource.Cache
 C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\HttpClientShared.exe
 C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\HttpClientShared.pdb
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\HttpClientShared.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\HttpClientShared.pdb
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\obj\Debug\Armament\VanguardView.g.cs
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\obj\Debug\Armament\VanguardView.baml

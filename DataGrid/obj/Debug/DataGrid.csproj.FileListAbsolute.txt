@@ -24,3 +24,6 @@ C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\DataGrid\bin\Debug
 C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\DataGrid\bin\Debug\MahApps.Metro.IconPacks.pdb
 C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\DataGrid\bin\Debug\MahApps.Metro.IconPacks.xml
 C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\DataGrid\obj\Debug\App.baml
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\DataGrid\bin\Debug\DataGrid.exe.config
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\DataGrid\obj\Debug\DataGrid.exe
+C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\DataGrid\obj\Debug\DataGrid.pdb

@@ -102,12 +102,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Armament\VanguardView.xaml.cs">
+      <DependentUpon>VanguardView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Async\AsyncObservableCollection.cs" />
     <Compile Include="Models\SuperRapidViewModel.cs" />
     <Compile Include="Models\UserXmlModel.cs" />
     <Compile Include="Serivces\ArmamentServices.cs" />
     <Compile Include="Utils\XmlUtils.cs" />
     <Page Include="Armament\SuperRapidView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Armament\VanguardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

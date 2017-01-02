@@ -23,6 +23,9 @@
         <TabItem Header="SuperRapid" >
             <Armament:SuperRapidView/>
         </TabItem>
+        <TabItem Header="Vanguard" >
+            <Armament:VanguardView/>
+        </TabItem>
         <!--
         <TabItem Header="buttons2">
             <Views:Page1/>
