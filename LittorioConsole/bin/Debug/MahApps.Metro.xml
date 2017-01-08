@@ -1295,9 +1295,24 @@
             Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.OptionsItemTemplate"/> dependency property.
             </summary>
         </member>
+        <member name="F:MahApps.Metro.Controls.HamburgerMenu.OptionsItemTemplateSelectorProperty">
+            <summary>
+            Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.OptionsItemTemplateSelector"/> dependency property.
+            </summary>
+        </member>
         <member name="F:MahApps.Metro.Controls.HamburgerMenu.OptionsVisibilityProperty">
             <summary>
             Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.OptionsVisibility"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:MahApps.Metro.Controls.HamburgerMenu.SelectedOptionsItemProperty">
+            <summary>
+            Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.SelectedOptionsItem"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:MahApps.Metro.Controls.HamburgerMenu.SelectedOptionsIndexProperty">
+            <summary>
+            Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.SelectedOptionsIndex"/> dependency property.
             </summary>
         </member>
         <member name="P:MahApps.Metro.Controls.HamburgerMenu.OptionsItemsSource">
@@ -1308,6 +1323,11 @@
         <member name="P:MahApps.Metro.Controls.HamburgerMenu.OptionsItemTemplate">
             <summary>
             Gets or sets the DataTemplate used to display each item in the options.
+            </summary>
+        </member>
+        <member name="P:MahApps.Metro.Controls.HamburgerMenu.OptionsItemTemplateSelector">
+            <summary>
+            Gets or sets the DataTemplateSelector used to display each item in the options.
             </summary>
         </member>
         <member name="P:MahApps.Metro.Controls.HamburgerMenu.OptionsItems">
@@ -1373,6 +1393,26 @@
             Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.ItemTemplate"/> dependency property.
             </summary>
         </member>
+        <member name="F:MahApps.Metro.Controls.HamburgerMenu.ItemTemplateSelectorProperty">
+            <summary>
+            Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.ItemTemplateSelector"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:MahApps.Metro.Controls.HamburgerMenu.SelectedItemProperty">
+            <summary>
+            Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.SelectedItem"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:MahApps.Metro.Controls.HamburgerMenu.SelectedIndexProperty">
+            <summary>
+            Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.SelectedIndex"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:MahApps.Metro.Controls.HamburgerMenu.ContentTransitionProperty">
+            <summary>
+            Identifies the <see cref="P:MahApps.Metro.Controls.HamburgerMenu.ContentTransition"/> dependency property.
+            </summary>
+        </member>
         <member name="P:MahApps.Metro.Controls.HamburgerMenu.OpenPaneLength">
             <summary>
             Gets or sets the width of the pane when it's fully expanded.
@@ -1411,6 +1451,11 @@
         <member name="P:MahApps.Metro.Controls.HamburgerMenu.ItemTemplate">
             <summary>
             Gets or sets the DataTemplate used to display each item.
+            </summary>
+        </member>
+        <member name="P:MahApps.Metro.Controls.HamburgerMenu.ItemTemplateSelector">
+            <summary>
+            Gets or sets the DataTemplateSelector used to display each item.
             </summary>
         </member>
         <member name="P:MahApps.Metro.Controls.HamburgerMenu.Items">

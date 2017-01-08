@@ -1,0 +1,6 @@
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\ReflectionTest\bin\Debug\ReflectionTest.exe.config
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\ReflectionTest\bin\Debug\ReflectionTest.exe
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\ReflectionTest\bin\Debug\ReflectionTest.pdb
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\ReflectionTest\obj\Debug\ReflectionTest.csprojResolveAssemblyReference.cache
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\ReflectionTest\obj\Debug\ReflectionTest.exe
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\ReflectionTest\obj\Debug\ReflectionTest.pdb

@@ -62,3 +62,9 @@ C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug
 C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\HttpClientShared.pdb
 C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\obj\Debug\Armament\VanguardView.g.cs
 C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\obj\Debug\Armament\VanguardView.baml
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\obj\Debug\Armament\VanguardView.g.cs
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\obj\Debug\Armament\VanguardView.baml
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\VirusTotal.NET.dll
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\IPAddressRange.dll
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\WhoisClient.dll
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\WhoisClient.xml

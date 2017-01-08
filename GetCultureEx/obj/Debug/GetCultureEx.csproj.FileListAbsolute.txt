@@ -1,0 +1,5 @@
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\GetCultureEx\bin\Debug\GetCultureEx.exe.config
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\GetCultureEx\bin\Debug\GetCultureEx.exe
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\GetCultureEx\bin\Debug\GetCultureEx.pdb
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\GetCultureEx\obj\Debug\GetCultureEx.exe
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\GetCultureEx\obj\Debug\GetCultureEx.pdb

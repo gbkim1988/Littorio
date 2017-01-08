@@ -16,17 +16,18 @@
                       
         WindowTransitionsEnabled="False"
         WindowStartupLocation="CenterScreen"
-        Height="400" Width="600">
+        Height="869" Width="1600">
 
     <Controls:MetroAnimatedSingleRowTabControl 
         x:Name="MainTabControl" Grid.Row="1" FontSize="5">
         <TabItem Header="SuperRapid" >
             <Armament:SuperRapidView/>
         </TabItem>
+        <!--
         <TabItem Header="Vanguard" >
             <Armament:VanguardView/>
         </TabItem>
-        <!--
+        
         <TabItem Header="buttons2">
             <Views:Page1/>
         </TabItem>

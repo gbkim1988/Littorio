@@ -4,8 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Littorio.Armament"
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300">
+      mc:Ignorable="d">
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     </UserControl.Resources>
@@ -19,7 +18,7 @@
                 칼럼의 비율을 조정하는 방법
                 2/7, 5/7 비율로 Column 의 비율을 자동으로 계산
             -->
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="4*" />
             <ColumnDefinition Width="5" />
             <ColumnDefinition Width="5*" />
         </Grid.ColumnDefinitions>
@@ -27,9 +26,10 @@
             <Label Content="Query .... " FontSize="14" Margin="10,0,10,1"/>
             <TextBox Text="{Binding Query}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="15" Margin="10,30,100,0" />
             <Button Command="{Binding Query2WhoisCommand}" Content="Go" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,10,0" Width="75" Height="16"/>
-            <TextBox Text="{Binding Path}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="15" Margin="10,60,100,0" />
-            <Button Command="{Binding LoadCSVFile}" Content="Open" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,10,0" Width="75" Height="16"/>
-            <ItemsControl ItemsSource="{Binding Operations}" Margin="10,134,10,10" FontSize="14">
+            <TextBox Text="{Binding FilePath}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="15" Margin="10,60,197,0" />
+            <Button Command="{Binding File2WhoisCommand}" Content="Open" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,100,0" Width="75" Height="16"/>
+            <Button Command="{Binding FireWhoisQuery}" Content="Fire" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,10,0" Width="75" Height="16"/>
+            <ItemsControl ItemsSource="{Binding Operations}" Margin="10,134,10,10" FontSize="14" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -48,40 +48,43 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </Grid>
-        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
+        <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
         <Grid Grid.Column="2" Grid.Row="0" >
-            <StackPanel Margin="10">
-            <DataGrid x:Name="WhoisDataGrid"
+            <StackPanel Margin="10" VerticalAlignment="Top">
+                <Label Content="{Binding Whoami}" Margin="10,10,10,0"/>
+                <TextBox Text="{Binding JsonContent}" TextWrapping="Wrap" AcceptsReturn="True" Margin="10"/>
+                <!-- Filter DataGrid -->
+                <TextBox HorizontalAlignment="Right" Width="123" Margin="0,0,10,0"/>
+                <DataGrid x:Name="WhoisDataGrid"
                   HeadersVisibility="All"
                   SelectionUnit="FullRow"
+                  Margin="10"
                   FontSize="12"
                   ItemsSource="{Binding WhoisGrid}"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
                   ScrollViewer.CanContentScroll="True"
-                  ScrollViewer.VerticalScrollBarVisibility="Auto"
-                  ScrollViewer.HorizontalScrollBarVisibility="Auto">
-                <DataGrid.Columns>
-                        <DataGridTextColumn Header="IP Range" Binding="{Binding IPRange}"/>
-                        <DataGridTextColumn Header="IP Prefix" Binding="{Binding IPPrefix}"/>
-                        <DataGridTextColumn Header="Orgnization" Binding="{Binding Organization}"/>
-                        <DataGridTextColumn Header="Org. ID" Binding="{Binding OrgID}"/>
-                        <DataGridTextColumn Header="Org. Address" Binding="{Binding OrgAddr}"/>
-                        <DataGridTextColumn Header="Register Date" Binding="{Binding Date}"/>
-                        <DataGridTextColumn Header="Contact Name" Binding="{Binding ContactName}"/>
-                        <DataGridTextColumn Header="Contact Phone" Binding="{Binding ContactPhone}"/>
-                        <DataGridTextColumn Header="Contact email" Binding="{Binding ContactEmail}"/>
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="IP" Binding="{Binding IP}"/>
+                        <DataGridTextColumn Header="INETNUM" Binding="{Binding INETNUM}"/>
+                        <DataGridTextColumn Header="COUNTRY" Binding="{Binding COUNTRY}"/>
+                        <DataGridTextColumn Header="ADDRESS" Binding="{Binding ADDR}"/>
+                        <DataGridTextColumn Header="PHONE" Binding="{Binding PHONE}"/>
+                        <DataGridTextColumn Header="EMAIL" Binding="{Binding EMAIL}"/>
+                        <DataGridTextColumn Header="IRT" Binding="{Binding IRT}"/>
+                        <DataGridTextColumn Header="SOURCE" Binding="{Binding SRC}"/>
                     </DataGrid.Columns>
-                <DataGrid.Style>
-                    <Style BasedOn="{StaticResource MetroDataGrid}" TargetType="{x:Type DataGrid}">
-                        <Setter Property="AlternatingRowBackground" Value="{DynamicResource GrayBrush10}" />
-                    </Style>
-                </DataGrid.Style>
-                <DataGrid.RowStyle>
-                    <Style BasedOn="{StaticResource MetroDataGridRow}" TargetType="{x:Type DataGridRow}">
-                    </Style>
-                </DataGrid.RowStyle>
-            </DataGrid>
+                    <DataGrid.Style>
+                        <Style BasedOn="{StaticResource MetroDataGrid}" TargetType="{x:Type DataGrid}">
+                            <Setter Property="AlternatingRowBackground" Value="{DynamicResource GrayBrush10}" />
+                        </Style>
+                    </DataGrid.Style>
+                    <DataGrid.RowStyle>
+                        <Style BasedOn="{StaticResource MetroDataGridRow}" TargetType="{x:Type DataGridRow}"/>
+                    </DataGrid.RowStyle>
+                </DataGrid>
             </StackPanel>
         </Grid>
     </Grid>
