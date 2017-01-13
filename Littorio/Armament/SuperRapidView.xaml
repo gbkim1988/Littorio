@@ -59,6 +59,7 @@
                   HeadersVisibility="All"
                   SelectionUnit="FullRow"
                   Margin="10"
+                  Height="500"
                   FontSize="12"
                   ItemsSource="{Binding WhoisGrid}"
                   AutoGenerateColumns="False"
