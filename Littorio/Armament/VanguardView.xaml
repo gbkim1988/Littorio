@@ -5,6 +5,66 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Littorio.Armament">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="WebRecords"
+            HeadersVisibility="All"
+            Margin="5"
+            AutoGenerateColumns="False">
+            <DataGridTextColumn Header="#" Binding="{Binding IP}"/>
+            <DataGridTextColumn Header="Host" Binding="{Binding INETNUM}"/>
+            <DataGridTextColumn Header="Method" Binding="{Binding COUNTRY}"/>
+            <DataGridTextColumn Header="URL" Binding="{Binding ADDR}"/>
+            <DataGridTextColumn Header="Params" Binding="{Binding PHONE}"/>
+            <DataGridTextColumn Header="Edited" Binding="{Binding EMAIL}"/>
+            <DataGridTextColumn Header="Status" Binding="{Binding IRT}"/>
+            <DataGridTextColumn Header="Length" Binding="{Binding SRC}"/>
+            <DataGridTextColumn Header="Mime type" Binding="{Binding SRC}"/>
+            <DataGridTextColumn Header="Extension" Binding="{Binding SRC}"/>\
+            <DataGridTextColumn Header="Title" Binding="{Binding SRC}"/>
+            <DataGridTextColumn Header="SSL" Binding="{Binding SRC}"/>
+            <DataGridTextColumn Header="IP" Binding="{Binding SRC}"/>
+            <DataGridTextColumn Header="Title" Binding="{Binding SRC}"/>
+            <DataGridTextColumn Header="Time" Binding="{Binding SRC}"/>
+            <DataGridTextColumn Header="Listener" Binding="{Binding SRC}"/>
+            <DataGrid.Style>
+                <Style BasedOn="{StaticResource MetroDataGrid}" TargetType="{x:Type DataGrid}">
+                    <Setter Property="AlternatingRowBackground" Value="{DynamicResource GrayBrush10}" />
+                </Style>
+            </DataGrid.Style>
+            <DataGrid.RowStyle>
+                <Style BasedOn="{StaticResource MetroDataGridRow}" TargetType="{x:Type DataGridRow}"/>
+            </DataGrid.RowStyle>
+        </DataGrid>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal">
+                <Label Width="150" Margin="1,0,1,0" 
+                       Content="Capture Traffic" 
+                       FontSize="12" FontStyle="Normal" FontFamily="Verdana" FontWeight="Bold"></Label>
+                <Button Width="150" Margin="1,0,1,0" Content="FiddlerCore" 
+                        FontSize="12" FontStyle="Normal" FontFamily="Verdana" FontWeight="Bold"></Button>
+                <Button Width="100" Margin="1,0,1,0"></Button>
+            </StackPanel>    
+        </Grid>
+        <GridSplitter Grid.Row="1" Height="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"></GridSplitter>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <TextBox AcceptsReturn="True" 
+                     AcceptsTab="True" 
+                     ScrollViewer.CanContentScroll="True" 
+                     ScrollViewer.VerticalScrollBarVisibility="Visible"
+                     ScrollViewer.HorizontalScrollBarVisibility="Visible"></TextBox>
+        </Grid>
+
     </Grid>
 </UserControl>
