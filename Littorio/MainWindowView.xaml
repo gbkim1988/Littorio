@@ -31,7 +31,7 @@
             <MenuItem Header="Theme" ItemsSource="{Binding AppThemes, Mode=OneWay}" />
         </Menu>
     <Controls:MetroAnimatedSingleRowTabControl 
-        x:Name="MainTabControl" Grid.Row="1" FontSize="5">
+        x:Name="MainTabControl" Grid.Row="1" FontSize="5" Margin="0,10,0,12" Grid.RowSpan="2">
         <TabItem Header="SuperRapid" >
             <Armament:SuperRapidView/>
         </TabItem>
