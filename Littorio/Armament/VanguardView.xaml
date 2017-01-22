@@ -30,15 +30,17 @@
         </LinearGradientBrush>
         <!-- Label 스타일 지정 -->
         <Style x:Key="SimpleLabel" TargetType="{x:Type Label}" BasedOn="{x:Null}">
+            <!--
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="Margin" Value="5,0,5,0"/>
-            <!-- <Setter Property="Width" Value="100"/> -->
+             <Setter Property="Width" Value="100"/> -->
         </Style>
         <!-- TextBox 스타일 지정 -->
         <Style x:Key="SimpleTextBox" TargetType="{x:Type TextBox}" BasedOn="{x:Null}">
+            <!--
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="Width" Value="100"/>
-            <Setter Property="Margin" Value="5,0,5,0"/>
+            <Setter Property="Margin" Value="5,0,5,0"/> -->
         </Style>
         <!-- Button 스타일 지정 예시 -->
         <Style x:Key="SimpleButton" TargetType="{x:Type Button}" BasedOn="{x:Null}">
@@ -75,7 +77,7 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
@@ -83,9 +85,10 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                    <DataGrid x:Name="WebRecords" Grid.Row="0" Grid.Column="0">
-                        <DataGridTextColumn Header="#" Binding="{Binding IP}"/>
-                        <DataGridTextColumn Header="Host" Binding="{Binding INETNUM}"/>
+                <DataGrid x:Name="WebRecords" Grid.Row="0" Grid.Column="0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="No." Binding="{Binding IP}"/>
+                        <DataGridTextColumn Header="Domain" Binding="{Binding INETNUM}"/>
                         <DataGridTextColumn Header="Method" Binding="{Binding COUNTRY}"/>
                         <DataGridTextColumn Header="URL" Binding="{Binding ADDR}"/>
                         <DataGridTextColumn Header="Params" Binding="{Binding PHONE}"/>
@@ -100,24 +103,81 @@
                         <DataGridTextColumn Header="Title" Binding="{Binding SRC}"/>
                         <DataGridTextColumn Header="Time" Binding="{Binding SRC}"/>
                         <DataGridTextColumn Header="Listener" Binding="{Binding SRC}"/>
-                    </DataGrid>
+                    </DataGrid.Columns>
+                    <DataGrid.Style>
+                        <Style BasedOn="{StaticResource MetroDataGrid}" TargetType="{x:Type DataGrid}">
+                            <Setter Property="AlternatingRowBackground" Value="{DynamicResource GrayBrush10}" />
+                        </Style>
+                    </DataGrid.Style>
+                    <DataGrid.RowStyle>
+                        <Style BasedOn="{StaticResource MetroDataGridRow}" TargetType="{x:Type DataGridRow}">
+                        </Style>
+                    </DataGrid.RowStyle>
+                </DataGrid>
             </Grid>
             <GridSplitter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="5"></GridSplitter>
-            <Grid Grid.Column="2">
+            <Grid Grid.Column="2" HorizontalAlignment="Stretch">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal">
-                    <Label Content="Host" Style="{StaticResource SimpleLabel}"></Label>
-                    <TextBox Style="{StaticResource SimpleTextBox}"></TextBox>
-                    <Label Content="Port" Style="{StaticResource SimpleLabel}"></Label>
-                    <TextBox Style="{StaticResource SimpleTextBox}"></TextBox>
-                    <ToggleButton Content="FiddlerOn"></ToggleButton>
-                    <Button Height="23" Width="100" Style="{StaticResource SimpleButton}">Cancel</Button>
-                </StackPanel>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0">Listen On</Label>
+                <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
+                <Rectangle Grid.Row="0" Grid.Column="0" Stroke="Black" Fill="Transparent" />
+                <Label Grid.Row="1" Grid.Column="0">Capture On</Label>
+                <ToggleButton Grid.Row="1" Grid.Column="1">On</ToggleButton>
+                <Label Grid.Row="2" Grid.Column="0">Include Host</Label>
+                <ListBox Grid.Row="2" Grid.Column="1"></ListBox>
+                <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">Selected Items</Label>
+                <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- 사각형 모양을 만들기 위해서
+                        <Rectangle Grid.Column="1"
+                           Grid.Row="0"  
+                           Stroke="Blue"
+                           Fill="Transparent" /> 
+                    -->
+                    <Rectangle Grid.Row="0" Grid.Column="0" Stroke="Black" Fill="Transparent" />
+                    <Label Grid.Row="0" Grid.Column="0">Domain :</Label>
+                    <Rectangle Grid.Row="0" Grid.Column="1" Stroke="Black" Fill="Transparent" />
+                    <Label Grid.Row="0" Grid.Column="1">www.example.com</Label>
+
+                    <Rectangle Grid.Row="1" Grid.Column="0" Stroke="Black" Fill="Transparent" />
+                    <Label Grid.Row="1" Grid.Column="0">URL :</Label>
+                    <Rectangle Grid.Row="1" Grid.Column="1" Stroke="Black" Fill="Transparent" />
+                    <Label Grid.Row="1" Grid.Column="1">http://www.example</Label>
+
+                    <Rectangle Grid.Row="2" Grid.Column="0" Stroke="Black" Fill="Transparent" />
+                    <Label Grid.Row="2" Grid.Column="0">Params:</Label>
+                    <Rectangle Grid.Row="2" Grid.Column="1" Stroke="Black" Fill="Transparent" />
+                    <CheckBox IsEnabled="False" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center"></CheckBox>
+
+                    <Rectangle Grid.Row="3" Grid.Column="0" Stroke="Black" Fill="Transparent" />
+                    <Label Grid.Row="3" Grid.Column="0">Test Groups:</Label>
+                    <Rectangle Grid.Row="3" Grid.Column="1" Stroke="Black" Fill="Transparent" />
+                    <StackPanel HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1">
+                        <ComboBox></ComboBox>
+                        <Button>Add</Button>
+                    </StackPanel>
+
+
+                </Grid>
             </Grid>
         </Grid>
         <GridSplitter Grid.Row="1" Height="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"></GridSplitter>
@@ -139,7 +199,8 @@
                                  AcceptsTab="True" 
                                  ScrollViewer.CanContentScroll="True" 
                                  ScrollViewer.VerticalScrollBarVisibility="Visible"
-                                 ScrollViewer.HorizontalScrollBarVisibility="Visible"></TextBox>
+                                 ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                 Style="{StaticResource MetroTextBox}"></TextBox>
                     </Controls:MetroTabItem>
                     <Controls:MetroTabItem Header="Hex">
                         <TextBox AcceptsReturn="True" 

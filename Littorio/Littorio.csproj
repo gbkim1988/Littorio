@@ -50,6 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FiddlerCore4">
+      <HintPath>..\Libs\DotNet4\FiddlerCore4.dll</HintPath>
+    </Reference>
     <Reference Include="IPAddressRange, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\IPAddressRange.1.5.0.0\lib\net40\IPAddressRange.dll</HintPath>
       <Private>True</Private>
@@ -119,6 +122,7 @@
     </Compile>
     <Compile Include="Async\AsyncObservableCollection.cs" />
     <Compile Include="Final\Countries.cs" />
+    <Compile Include="Models\HTTPSession.cs" />
     <Compile Include="Models\SuperRapidViewModel.cs" />
     <Compile Include="Models\UserXmlModel.cs" />
     <Compile Include="Models\WhoisAPNIC.cs" />
@@ -213,6 +217,9 @@
       <Project>{B88FE63F-D7CA-4B09-8363-C8FF0D684536}</Project>
       <Name>HttpClientShared</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Globals\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

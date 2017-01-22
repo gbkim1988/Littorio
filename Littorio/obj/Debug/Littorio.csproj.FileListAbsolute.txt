@@ -72,3 +72,7 @@ C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug
 C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\VirusTotal.NET.dll
 C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\WhoisClient.dll
 C:\Users\YES24\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\WhoisClient.xml
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\FiddlerCore4.dll
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\EQATEC.Analytics.Monitor.dll
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\FiddlerCore4.pdb
+C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\FiddlerCore4.xml
