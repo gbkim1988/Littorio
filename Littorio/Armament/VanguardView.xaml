@@ -28,6 +28,18 @@
             <GradientStop Color="#444" Offset="0.0"/>
             <GradientStop Color="#888" Offset="1.0"/>
         </LinearGradientBrush>
+        <!-- x:Key 속성을 정의하지 않으면 전역 전용임을 확인함 이를 이용해서 일관된 Label 스타일을 구축한다. -->
+        <Style TargetType="{x:Type Label}" BasedOn="{x:Null}">
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+        </Style>
+        <Style TargetType="{x:Type ToggleButton}" BasedOn="{x:Null}">
+            <Setter Property="Height" Value="35"></Setter>
+        </Style>
+        <Style TargetType="{x:Type Grid}" BasedOn="{x:Null}">
+            <Setter Property="Margin" Value="5 5 5 5"></Setter>
+        </Style>
         <!-- Label 스타일 지정 -->
         <Style x:Key="SimpleLabel" TargetType="{x:Type Label}" BasedOn="{x:Null}">
             <!--
@@ -83,9 +95,16 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <DataGrid x:Name="WebRecords" Grid.Row="0" Grid.Column="0">
+                <StackPanel HorizontalAlignment="Right" Grid.Row="0" Orientation="Horizontal" Height="35">
+                    <Label>Select Search Type</Label>
+                    <ComboBox></ComboBox>
+                    <Label>Search : </Label>
+                    <TextBox></TextBox>
+                </StackPanel>
+                <DataGrid x:Name="WebRecords" Grid.Row="1" Grid.Column="0">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="No." Binding="{Binding IP}"/>
                         <DataGridTextColumn Header="Domain" Binding="{Binding INETNUM}"/>
@@ -116,36 +135,41 @@
                 </DataGrid>
             </Grid>
             <GridSplitter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="5"></GridSplitter>
-            <Grid Grid.Column="2" HorizontalAlignment="Stretch">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+            <Grid Grid.Column="2" >
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0">Listen On</Label>
-                <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
-                <Rectangle Grid.Row="0" Grid.Column="0" Stroke="Black" Fill="Transparent" />
-                <Label Grid.Row="1" Grid.Column="0">Capture On</Label>
-                <ToggleButton Grid.Row="1" Grid.Column="1">On</ToggleButton>
-                <Label Grid.Row="2" Grid.Column="0">Include Host</Label>
-                <ListBox Grid.Row="2" Grid.Column="1"></ListBox>
-                <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">Selected Items</Label>
-                <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" >
+                <Grid Grid.Column="1"  HorizontalAlignment="Stretch">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0">Listen On</Label>
+                    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Proxy}"  Height="30"></TextBox>
+                    
+                    <Label Grid.Row="1" Grid.Column="0">Capture On</Label>
+                    <ToggleButton Grid.Row="1" Grid.Column="1" Checked="FiddlerOn" Unchecked="FiddlerOff">On</ToggleButton>
+                    <Label Grid.Row="2" Grid.Column="0">Include Host</Label>
+                    <ListBox Grid.Row="2" Grid.Column="1"></ListBox>
+                </Grid>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <!-- 사각형 모양을 만들기 위해서
                         <Rectangle Grid.Column="1"
@@ -153,30 +177,23 @@
                            Stroke="Blue"
                            Fill="Transparent" /> 
                     -->
-                    <Rectangle Grid.Row="0" Grid.Column="0" Stroke="Black" Fill="Transparent" />
-                    <Label Grid.Row="0" Grid.Column="0">Domain :</Label>
-                    <Rectangle Grid.Row="0" Grid.Column="1" Stroke="Black" Fill="Transparent" />
-                    <Label Grid.Row="0" Grid.Column="1">www.example.com</Label>
+                    <Label Grid.Row="0" Grid.Column="0">Selected Items</Label>
+                    <Label Grid.Row="0" Grid.Column="1"></Label>
+                    
+                    <Label Grid.Row="1" Grid.Column="0">Domain :</Label>
+                    <Label Grid.Row="1" Grid.Column="1">www.example.com</Label>
 
-                    <Rectangle Grid.Row="1" Grid.Column="0" Stroke="Black" Fill="Transparent" />
-                    <Label Grid.Row="1" Grid.Column="0">URL :</Label>
-                    <Rectangle Grid.Row="1" Grid.Column="1" Stroke="Black" Fill="Transparent" />
-                    <Label Grid.Row="1" Grid.Column="1">http://www.example</Label>
+                    <Label Grid.Row="2" Grid.Column="0">URL :</Label>
+                    <Label Grid.Row="2" Grid.Column="1">http://www.example</Label>
 
-                    <Rectangle Grid.Row="2" Grid.Column="0" Stroke="Black" Fill="Transparent" />
-                    <Label Grid.Row="2" Grid.Column="0">Params:</Label>
-                    <Rectangle Grid.Row="2" Grid.Column="1" Stroke="Black" Fill="Transparent" />
-                    <CheckBox IsEnabled="False" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center"></CheckBox>
+                    <Label Grid.Row="3" Grid.Column="0">Params:</Label>
+                    <CheckBox IsEnabled="False" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center"></CheckBox>
 
-                    <Rectangle Grid.Row="3" Grid.Column="0" Stroke="Black" Fill="Transparent" />
-                    <Label Grid.Row="3" Grid.Column="0">Test Groups:</Label>
-                    <Rectangle Grid.Row="3" Grid.Column="1" Stroke="Black" Fill="Transparent" />
-                    <StackPanel HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1">
+                    <Label Grid.Row="4" Grid.Column="0">Test Groups:</Label>
+                    <StackPanel Grid.Row="4" Grid.Column="1">
                         <ComboBox></ComboBox>
                         <Button>Add</Button>
                     </StackPanel>
-
-
                 </Grid>
             </Grid>
         </Grid>
@@ -200,7 +217,7 @@
                                  ScrollViewer.CanContentScroll="True" 
                                  ScrollViewer.VerticalScrollBarVisibility="Visible"
                                  ScrollViewer.HorizontalScrollBarVisibility="Visible"
-                                 Style="{StaticResource MetroTextBox}"></TextBox>
+                                 Text="{Binding Request}"></TextBox>
                     </Controls:MetroTabItem>
                     <Controls:MetroTabItem Header="Hex">
                         <TextBox AcceptsReturn="True" 
@@ -226,7 +243,8 @@
                                  AcceptsTab="True" 
                                  ScrollViewer.CanContentScroll="True" 
                                  ScrollViewer.VerticalScrollBarVisibility="Visible"
-                                 ScrollViewer.HorizontalScrollBarVisibility="Visible"></TextBox>
+                                 ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                 Text="{Binding Response}"></TextBox>
                     </Controls:MetroTabItem>
                     <Controls:MetroTabItem Header="Hex">
                         <TextBox AcceptsReturn="True" 

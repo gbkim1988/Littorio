@@ -76,3 +76,7 @@ C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug
 C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\EQATEC.Analytics.Monitor.dll
 C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\FiddlerCore4.pdb
 C:\Users\gbkim\Documents\Visual Studio 2015\Projects\Littorio\Littorio\bin\Debug\FiddlerCore4.xml
+C:\Users\YES24\documents\visual studio 2015\Projects\Littorio\Littorio\bin\Debug\FiddlerCore4.dll
+C:\Users\YES24\documents\visual studio 2015\Projects\Littorio\Littorio\bin\Debug\EQATEC.Analytics.Monitor.dll
+C:\Users\YES24\documents\visual studio 2015\Projects\Littorio\Littorio\bin\Debug\FiddlerCore4.pdb
+C:\Users\YES24\documents\visual studio 2015\Projects\Littorio\Littorio\bin\Debug\FiddlerCore4.xml

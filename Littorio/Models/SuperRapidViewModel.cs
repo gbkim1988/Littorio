@@ -32,11 +32,12 @@ namespace Littorio.Models
 
         public ICommand RemoveCommand { get; private set; }
     }
-
+    
     public sealed class SuperRapidViewModel : INotifyPropertyChanged
     {
         public SuperRapidViewModel()
         {
+            
             Query = "125.209.222.141";
             Operations = new AsyncObservableCollection<Query2WhoisViewModel>();
             WhoisGrid = new AsyncObservableCollection<WhoisAPNIC>();
